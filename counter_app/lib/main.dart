@@ -18,6 +18,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      // Here we create the Cubit globally. For larger app's these would be
+      // scoped. Any widget under the tree of this point can access the Cubit
+      // from the context.
       home: BlocProvider(
           create: (context) => CounterCubit(), child: const CounterPage()),
     );

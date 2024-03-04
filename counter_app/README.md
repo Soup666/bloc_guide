@@ -1,16 +1,10 @@
-# counter_app
+# Counter App
 
-A new Flutter project.
+As simple as it gets really. This example goes over a very basic two button app that manages an `int count` in it's state. The App uses a `BlocConsumer` to listen for state changes and rebuild the widget accordingly.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Read through the code and try understand what's happening. Main points of interest:
+ - `main.dart` - Creates the Provider for the Cubit globally
+ - `counter_cubit/` - The main filling in the app. This handles the state and provides functions for updating the state.
+ - `counter_page.dart` - The main app view. Reads the state from the context and calls functions depending on user interaction.

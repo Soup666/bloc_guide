@@ -8,6 +8,11 @@ class CounterPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<CounterCubit, CounterState>(
+      // BlocConsumer's merge the BlocListener and BlocBuilder wigets.
+      // [Listener] is used for event handling. Nothing is rebuilt inside the
+      // listener
+      // [Builder] is used for rebuilding the widget tree when the state needs
+      // rebuilding. This is where the Widget tree goes
       listener: (context, state) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
           content: Text(state.message),
@@ -21,10 +26,15 @@ class CounterPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              // Shows the current [count] state. Is automatically rebuilt when
+              // the state changes
               Text("${state.count}"),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  // Buttons for calling functions on the state. Since we set
+                  // up CounterCubit as a global Cubit, we can access it from
+                  // anywhere within the tree.
                   ElevatedButton(
                       onPressed: () =>
                           context.read<CounterCubit>().increaseCounter(),

@@ -10,6 +10,9 @@ Bloc is a state management ( sort of framework ). You'll use mostly `StatelessWi
  - `counter_app` as simple as it gets. A basic Cubit example of managing a state
 
 
+## Useful Resources
+ - [ The Best Flutter Bloc Complete Course - Visualise, Understand, Learn & Practice Bloc Concepts ](https://www.youtube.com/watch?v=THCkkQ-V1-8)
+
 <hr>
 <i>Last Updated 4/3/2024<br>
 Author: <strong>Sam Laister with Everbit Software</strong></i>
