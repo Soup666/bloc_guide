@@ -1,4 +1,4 @@
-import 'package:weather_app/keys.dart';
+import 'package:weather_app/weather/auth/keys.dart';
 import 'package:http/http.dart' as http;
 
 class WeatherApi {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/weather/bloc/weather_bloc.dart';
-import 'package:weather_app/weather/view/weatherView.dart';
+import 'package:weather_app/weather/view/weather_view.dart';
 
 class WeatherScreen extends StatelessWidget {
   const WeatherScreen({super.key});
