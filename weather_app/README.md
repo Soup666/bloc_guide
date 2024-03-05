@@ -1,16 +1,15 @@
-# weather_app
+# Weather App
 
-A new Flutter project.
+A more complex example demonstraighting Bloc Architecture, including Data Layer, Business Logic Layer, and Presentation Layer.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+As with the other subprojects, the code will be commented and just explore.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Where to start:
+ - `main.dart` - the main entrypoint
+ - `repository/` - where to find repositorys for the project
+ - `bloc/` - the location of blocs
+ - `api/` - the data layer for communicating with the api
+ - `model/` - models for the project
+ - `view/` - flutter widgets

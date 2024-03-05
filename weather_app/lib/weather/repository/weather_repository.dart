@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:weather_app/weather/model/city/model.dart';
 import 'package:weather_app/weather/model/weather/model.dart';
 import 'package:weather_app/weather/weather.dart';
