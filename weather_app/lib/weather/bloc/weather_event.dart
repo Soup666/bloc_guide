@@ -7,3 +7,5 @@ class CityRequested extends WeatherEvent {
   final String cityName;
   CityRequested(this.cityName);
 }
+
+class CityReset extends WeatherEvent {}

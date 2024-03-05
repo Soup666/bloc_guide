@@ -13,6 +13,7 @@ class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
         super(WeatherInitial()) {
     on<WeatherEvent>((event, emit) {});
     on<CityRequested>(_fetchCity);
+    on<CityReset>(_resetCity);
   }
 
   final WeatherRepository _weatherRepository;
@@ -30,4 +31,7 @@ class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
       emit(WeatherLoadError("Failed to load city/weather: $e"));
     }
   }
+
+  void _resetCity(CityReset event, Emitter<WeatherState> emit) =>
+      emit(WeatherInitial());
 }

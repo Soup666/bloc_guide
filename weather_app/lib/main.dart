@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           child: BlocProvider(
             create: (context) => WeatherBloc(
                 weatherRepository: context.read<WeatherRepository>()),
-            child: const WeatherScreen(),
+            child: WeatherScreen(),
           ),
         ));
   }

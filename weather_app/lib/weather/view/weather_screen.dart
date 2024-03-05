@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/weather/bloc/weather_bloc.dart';
-import 'package:weather_app/weather/view/weather_view.dart';
+import 'package:weather_app/weather/view/view.dart';
 
 class WeatherScreen extends StatelessWidget {
   const WeatherScreen({super.key});
@@ -24,13 +24,7 @@ class WeatherScreen extends StatelessWidget {
           } else if (state is WeatherLoadError) {
             return Text("Error: ${state.error}");
           } else {
-            return Container(
-              child: ElevatedButton(
-                onPressed: () =>
-                    context.read<WeatherBloc>().add(CityRequested("Sheffield")),
-                child: const Text("Press"),
-              ),
-            );
+            return WeatherForm();
           }
         }),
       ),
